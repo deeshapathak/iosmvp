@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "🔐 GitHub Authentication Setup"
+echo "=============================="
+echo ""
+echo "To push to GitHub, you need a Personal Access Token."
+echo ""
+echo "Steps:"
+echo "1. Go to: https://github.com/settings/tokens"
+echo "2. Click 'Generate new token' → 'Generate new token (classic)'"
+echo "3. Name it: 'iosmvp-push'"
+echo "4. Select scope: ✅ repo"
+echo "5. Click 'Generate token'"
+echo "6. COPY THE TOKEN (you won't see it again!)"
+echo ""
+echo "Then run:"
+echo "  git push origin main"
+echo ""
+echo "When prompted:"
+echo "  Username: your GitHub username"
+echo "  Password: paste the token (not your password)"
+echo ""
+read -p "Press Enter when you have your token ready, or Ctrl+C to cancel..."
+
+echo ""
+echo "✅ Ready to push! Run: git push origin main"
+

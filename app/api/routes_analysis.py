@@ -25,11 +25,12 @@ async def analyze_from_landmarks(payload: LandmarkRequest):
 async def analyze_from_scan(file: UploadFile = File(...)):
     """
     iOS → ARKit → upload 3D scan (usdz/obj/glb).
-    For now we store and run a stub analysis.
+    Stores scan and runs analysis. Scan can be accessed via /scans/ endpoints.
     """
     if not file.filename:
         raise HTTPException(status_code=400, detail="No file provided")
 
-    result = await save_scan_and_analyze(file)
+    result, scan_id = await save_scan_and_analyze(file)
+    result.id = scan_id  # Use scan_id as result ID
     return result
 

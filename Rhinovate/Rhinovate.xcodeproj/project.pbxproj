@@ -6,6 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DF6FCA0A2EC87D36001C3737 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FCA072EC87D36001C3737 /* ResultView.swift */; };
+		DF6FCA0B2EC87D36001C3737 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FCA082EC87D36001C3737 /* ScanView.swift */; };
+		DF6FCA0D2EC87D36001C3737 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FCA062EC87D36001C3737 /* HomeView.swift */; };
+		DF6FCA102EC880A7001C3737 /* FaceScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FCA0E2EC880A7001C3737 /* FaceScanViewController.swift */; };
+		DF6FCA122EC884E5001C3737 /* RhinovatePatientScanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FCA112EC884E5001C3737 /* RhinovatePatientScanApp.swift */; };
+		DF6FCA142EC884F2001C3737 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FCA132EC884F2001C3737 /* APIClient.swift */; };
+		DF6FCA162EC884F3001C3737 /* FaceScanExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FCA152EC884F3001C3737 /* FaceScanExporter.swift */; };
+		DF6FCA182EC884F6001C3737 /* FaceScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FCA172EC884F6001C3737 /* FaceScanViewModel.swift */; };
+		DF6FCA1C2EC884F7001C3737 /* FaceScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6FCA1B2EC884F7001C3737 /* FaceScanView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DF731C2E2EC855EC00D27243 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,12 +36,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF6FCA042EC87D36001C3737 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		DF6FCA062EC87D36001C3737 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DF6FCA072EC87D36001C3737 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		DF6FCA082EC87D36001C3737 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		DF6FCA0E2EC880A7001C3737 /* FaceScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScanViewController.swift; sourceTree = "<group>"; };
+		DF6FCA112EC884E5001C3737 /* RhinovatePatientScanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhinovatePatientScanApp.swift; sourceTree = "<group>"; };
+		DF6FCA132EC884F2001C3737 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		DF6FCA152EC884F3001C3737 /* FaceScanExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScanExporter.swift; sourceTree = "<group>"; };
+		DF6FCA172EC884F6001C3737 /* FaceScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScanViewModel.swift; sourceTree = "<group>"; };
+		DF6FCA1B2EC884F7001C3737 /* FaceScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceScanView.swift; sourceTree = "<group>"; };
 		DF731C1E2EC855EA00D27243 /* Rhinovate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhinovate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF731C2D2EC855EC00D27243 /* RhinovateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RhinovateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF731C372EC855EC00D27243 /* RhinovateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RhinovateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DF6FCA252EC88BBC001C3737 /* Exceptions for "Models" folder in "Rhinovate" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AnalysisResult.swift,
+			);
+			target = DF731C1D2EC855EA00D27243 /* Rhinovate */;
+		};
+		DF6FCA262EC88BBC001C3737 /* Exceptions for "Models" folder in "RhinovateTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AnalysisResult.swift,
+			);
+			target = DF731C2C2EC855EC00D27243 /* RhinovateTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		DF6FCA232EC88BBC001C3737 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DF6FCA252EC88BBC001C3737 /* Exceptions for "Models" folder in "Rhinovate" target */,
+				DF6FCA262EC88BBC001C3737 /* Exceptions for "Models" folder in "RhinovateTests" target */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DF731C202EC855EA00D27243 /* Rhinovate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Rhinovate;
@@ -72,9 +120,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF6FCA052EC87D36001C3737 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DF6FCA042EC87D36001C3737 /* APIClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DF6FCA092EC87D36001C3737 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF6FCA062EC87D36001C3737 /* HomeView.swift */,
+				DF6FCA072EC87D36001C3737 /* ResultView.swift */,
+				DF6FCA082EC87D36001C3737 /* ScanView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DF6FCA0F2EC880A7001C3737 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				DF6FCA0E2EC880A7001C3737 /* FaceScanViewController.swift */,
+				DF6FCA112EC884E5001C3737 /* RhinovatePatientScanApp.swift */,
+				DF6FCA132EC884F2001C3737 /* APIClient.swift */,
+				DF6FCA152EC884F3001C3737 /* FaceScanExporter.swift */,
+				DF6FCA172EC884F6001C3737 /* FaceScanViewModel.swift */,
+				DF6FCA1B2EC884F7001C3737 /* FaceScanView.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
 		DF731C152EC855EA00D27243 = {
 			isa = PBXGroup;
 			children = (
+				DF6FCA0F2EC880A7001C3737 /* AR */,
+				DF6FCA232EC88BBC001C3737 /* Models */,
+				DF6FCA052EC87D36001C3737 /* Services */,
+				DF6FCA092EC87D36001C3737 /* Views */,
 				DF731C202EC855EA00D27243 /* Rhinovate */,
 				DF731C302EC855EC00D27243 /* RhinovateTests */,
 				DF731C3A2EC855EC00D27243 /* RhinovateUITests */,
@@ -131,6 +214,7 @@
 				DF731C2F2EC855EC00D27243 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				DF6FCA232EC88BBC001C3737 /* Models */,
 				DF731C302EC855EC00D27243 /* RhinovateTests */,
 			);
 			name = RhinovateTests;
@@ -236,6 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6FCA122EC884E5001C3737 /* RhinovatePatientScanApp.swift in Sources */,
+				DF6FCA0A2EC87D36001C3737 /* ResultView.swift in Sources */,
+				DF6FCA182EC884F6001C3737 /* FaceScanViewModel.swift in Sources */,
+				DF6FCA0B2EC87D36001C3737 /* ScanView.swift in Sources */,
+				DF6FCA0D2EC87D36001C3737 /* HomeView.swift in Sources */,
+				DF6FCA102EC880A7001C3737 /* FaceScanViewController.swift in Sources */,
+				DF6FCA162EC884F3001C3737 /* FaceScanExporter.swift in Sources */,
+				DF6FCA1C2EC884F7001C3737 /* FaceScanView.swift in Sources */,
+				DF6FCA142EC884F2001C3737 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +493,7 @@
 				DEVELOPMENT_TEAM = 74TQBYS6S6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Taking a scan of your beauty";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +526,7 @@
 				DEVELOPMENT_TEAM = 74TQBYS6S6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Taking a scan of your beauty";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

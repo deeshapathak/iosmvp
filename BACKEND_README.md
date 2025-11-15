@@ -138,9 +138,66 @@ Health check endpoint
 ```json
 {
   "status": "ok",
-  "service": "rhinovate"
+  "service": "rhinovate",
+  "endpoints": {
+    "upload": "/analyze-scan",
+    "list_scans": "/scans/",
+    "download_scan": "/scans/{scan_id}/download"
+  }
 }
 ```
+
+### GET `/scans/`
+
+**List all uploaded scans** - Access from computer to see all scans
+
+**Response:**
+```json
+{
+  "scans": [
+    {
+      "id": "abc-123-def",
+      "filename": "face_scan.usdz",
+      "file_size": 123456,
+      "uploaded_at": "2025-11-15T10:30:00",
+      "format": "usdz",
+      "device": "iPhone 14 Pro",
+      "analysis_id": "xyz-789"
+    }
+  ],
+  "total": 1
+}
+```
+
+**Example (curl):**
+```bash
+curl http://127.0.0.1:8000/scans/
+```
+
+### GET `/scans/{scan_id}`
+
+Get metadata for a specific scan.
+
+**Example (curl):**
+```bash
+curl http://127.0.0.1:8000/scans/abc-123-def
+```
+
+### GET `/scans/{scan_id}/download`
+
+**Download a 3D scan file** - Access from computer to download scans
+
+**Example (curl):**
+```bash
+# Download to file
+curl -O http://127.0.0.1:8000/scans/abc-123-def/download
+
+# Or with custom filename
+curl -o my_scan.usdz http://127.0.0.1:8000/scans/abc-123-def/download
+```
+
+**In browser:**
+Just visit the URL to download the file directly.
 
 ## Testing
 
