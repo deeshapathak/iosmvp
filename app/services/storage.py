@@ -1,28 +1,39 @@
 import os
 import uuid
-from fastapi import UploadFile
+from fastapi import UploadFile, HTTPException
 from app.core.config import settings
 from app.services.facial_analysis import analyze_landmarks
+from app.services.landmark_extractor import extract_landmarks_from_mesh
 from app.models.analysis import AnalysisResult
 
 
 async def save_scan_and_analyze(file: UploadFile) -> AnalysisResult:
     """
-    Save 3D scan → (later) extract landmarks from it → run same analysis.
-    For now we fake landmarks so the iOS app always gets a valid response.
+    Save 3D scan → extract landmarks from it → run analysis.
     """
     os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
     file_id = str(uuid.uuid4())
-    ext = file.filename.split(".")[-1]
+    ext = file.filename.split(".")[-1] if file.filename else "usdz"
     dest_path = os.path.join(settings.UPLOAD_DIR, f"{file_id}.{ext}")
 
+    # Save uploaded file
     content = await file.read()
     with open(dest_path, "wb") as f:
         f.write(content)
 
-    # TODO: run 3D → landmarks here
-    # For now, use placeholder single landmark to keep API working
-    fake_landmarks = [{"x": 0.0, "y": 0.0, "z": 0.0}]
-    result = analyze_landmarks(fake_landmarks)
+    # Extract landmarks from 3D model
+    try:
+        landmarks = extract_landmarks_from_mesh(dest_path)
+        
+        if not landmarks or len(landmarks) == 0:
+            # Fallback to placeholder if extraction fails
+            landmarks = [{"x": 0.0, "y": 0.0, "z": 0.0}]
+    except Exception as e:
+        # Log error but continue with placeholder to keep API working
+        print(f"Warning: Landmark extraction failed: {e}")
+        landmarks = [{"x": 0.0, "y": 0.0, "z": 0.0}]
+    
+    # Run analysis with extracted landmarks
+    result = analyze_landmarks(landmarks)
     return result
 

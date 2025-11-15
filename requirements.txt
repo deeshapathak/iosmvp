@@ -3,4 +3,7 @@ uvicorn[standard]
 python-multipart
 pydantic
 pydantic-settings
+trimesh
+numpy
+scipy
 
